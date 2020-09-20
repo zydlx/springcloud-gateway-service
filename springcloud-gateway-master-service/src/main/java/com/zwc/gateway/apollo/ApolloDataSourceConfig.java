@@ -50,7 +50,7 @@ public class ApolloDataSourceConfig {
                 source -> JSON.parseObject(source, new TypeReference<List<DegradeRule>>() {
                 }));
         DegradeRuleManager.register2Property(degradeRule.getProperty());
-
+        //遗留问题,已解决但不完美
         /*ReadableDataSource<String, Set<ApiDefinition>> gatewayApiDataSource  = new ApolloDataSource<>(
                 namespaceName, apiKey, defaultApis,
                 new Converter<String, Set<ApiDefinition>>() {
